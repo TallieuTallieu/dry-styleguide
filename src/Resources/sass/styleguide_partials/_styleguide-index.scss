@@ -1,0 +1,32 @@
+@include block('styleguide-index')
+{
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	grid-column-gap: $styleguide-margin;
+	margin: $styleguide-margin;
+
+	@include element('item')
+	{
+		padding: $styleguide-margin;
+		background-color: $styleguide-color01;
+
+		a
+		{
+			border-bottom: 1px dotted $styleguide-color03;
+			color: $styleguide-color03;
+
+			&:hover
+			{
+				color: $styleguide-color02;
+				border-color: $styleguide-color02;
+			}
+		}
+	}
+
+	@include element('title')
+	{
+		font-size: 20px;
+		text-transform: lowercase;
+		margin-bottom: $styleguide-margin;
+	}
+}

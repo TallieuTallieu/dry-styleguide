@@ -1,0 +1,26 @@
+@include block('styleguide-breadcrumbs')
+{
+	display: flex;
+	justify-content: flex-start;
+	font-size: 18px;
+	background-color: $styleguide-color01;
+	padding: $styleguide-margin / 2;
+
+	a,
+	span
+	{
+		margin: 0 $styleguide-margin / 2;
+		color: $styleguide-color03;
+	}
+
+	a
+	{
+		border-bottom: 1px dotted $styleguide-color03;
+
+		&:hover
+		{
+			color: $styleguide-color02;
+			border-color: $styleguide-color02;
+		}
+	}
+}

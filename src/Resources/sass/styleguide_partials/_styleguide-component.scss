@@ -1,0 +1,33 @@
+@include block('styleguide-component')
+{
+	margin: $styleguide-margin;
+
+	@include element('title')
+	{
+		color: $styleguide-color03;
+		font-size: 20px;
+		margin-bottom: $styleguide-margin;
+	}
+
+	@include element('grid')
+	{
+		display: grid;
+		width: 100%;
+		grid-template-columns: 1fr;
+		grid-column-gap: $styleguide-margin;
+		grid-row-gap: $styleguide-margin;
+	}
+
+	@include element('modifier')
+	{
+		margin-bottom: $rule / 3;
+	}
+
+	@include element('render')
+	{
+		display: flex;
+		padding: $styleguide-margin;
+		border: 2px dashed $styleguide-color04;
+		margin-bottom: $styleguide-margin;
+	}
+}

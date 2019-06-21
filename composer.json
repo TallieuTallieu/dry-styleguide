@@ -1,0 +1,20 @@
+{
+    "name": "reinvanoyen/dry-styleguide",
+    "description": "Atomic styleguide system for DRY",
+    "authors": [
+        {
+            "name": "Rein Van Oyen",
+            "email": "reinvanoyen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "files": [
+        "src/Support/helpers.php"
+      ],
+      "psr-4": {
+        "Tnt\\Styleguide\\": "src/"
+      }
+    }
+}
