@@ -1,0 +1,22 @@
+#!/usr/bin/php
+<?php
+
+// Main SASS files
+
+$files = glob(__DIR__.'/../src/Resources/sass/*.scss');
+
+foreach($files as $file) {
+	if (is_file($file)) {
+		rename($file, __DIR__.'/../../../../../style/sass/'.basename($file));
+	}
+}
+
+// Partials
+
+$files = glob(__DIR__.'/../src/Resources/sass/styleguide_partials/*.scss');
+
+foreach($files as $file) {
+	if (is_file($file)) {
+		rename($file, __DIR__.'/../../../../../style/sass/styleguide_partials/'.basename($file));
+	}
+}
