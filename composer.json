@@ -16,5 +16,10 @@
       "psr-4": {
         "Tnt\\Styleguide\\": "src/"
       }
+    },
+    "scripts": {
+      "post-package-install": [
+        "mv ./vendor/reinvanoyen/dry-styleguide/Resources/sass/* ./style/sass/"
+      ]
     }
 }
