@@ -19,7 +19,7 @@ class StyleguideController
 		$tpl->atoms = $atoms;
 		$tpl->molecules = $molecules;
 		$tpl->organisms = $organisms;
-		$tpl->render( __DIR__.'/../Templates/index.tpl' );
+		$tpl->render('index.tpl');
 	}
 
 	public static function viewType( $request )
@@ -39,7 +39,7 @@ class StyleguideController
 		$tpl->type_short = $type_short;
 		$tpl->type_plural = $type.'s';
 		$tpl->meta = Support\get_meta_list( $type, $list );
-		$tpl->render( __DIR__.'/../Templates/view_type.tpl' );
+		$tpl->render('view_type.tpl');
 	}
 
 	public static function viewComponent( $request )
@@ -61,7 +61,7 @@ class StyleguideController
 		$tpl->modifiers = Support\get_rendered_component( $type, $component );
 		$tpl->examples = Support\get_rendered_examples( $type, $component );
 		$tpl->meta = Support\get_meta( $type, $component );
-		$tpl->render( __DIR__.'/../Templates/view_component.tpl' );
+		$tpl->render('view_component.tpl');
 	}
 
 	public static function viewComponentModifier( $request )
@@ -84,6 +84,6 @@ class StyleguideController
 		$tpl->modifier_name = $modifier;
 		$tpl->source = Support\render( $type, $component, $modifier );
 		$tpl->meta = Support\get_meta( $type, $component );
-		$tpl->render( __DIR__.'/../Templates/view_component_modifier.tpl' );
+		$tpl->render('view_component_modifier.tpl');
 	}
 }
