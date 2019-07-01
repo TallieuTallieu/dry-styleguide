@@ -1,15 +1,15 @@
-@include block('styleguide-component')
+.styleguide-component
 {
 	margin: $styleguide-margin;
 
-	@include element('title')
+	&__item
 	{
 		color: $styleguide-color03;
 		font-size: 20px;
 		margin-bottom: $styleguide-margin;
 	}
 
-	@include element('grid')
+	&__grid
 	{
 		display: grid;
 		width: 100%;
@@ -18,12 +18,12 @@
 		grid-row-gap: $styleguide-margin;
 	}
 
-	@include element('modifier')
+	&__modifier
 	{
-		margin-bottom: $rule / 3;
+		margin-bottom: $styleguide-rule / 3;
 	}
 
-	@include element('render')
+	&__render
 	{
 		display: flex;
 		padding: $styleguide-margin;

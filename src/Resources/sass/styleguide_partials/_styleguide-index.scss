@@ -1,11 +1,11 @@
-@include block('styleguide-index')
+.styleguide-index
 {
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
 	grid-column-gap: $styleguide-margin;
 	margin: $styleguide-margin;
 
-	@include element('item')
+	&__item
 	{
 		padding: $styleguide-margin;
 		background-color: $styleguide-color01;
@@ -23,7 +23,7 @@
 		}
 	}
 
-	@include element('title')
+	&__title
 	{
 		font-size: 20px;
 		text-transform: lowercase;

@@ -1,4 +1,4 @@
-@include block('styleguide-nav')
+.styleguide-nav
 {
 	background-color: $styleguide-color04;
 	padding: $styleguide-margin / 2 $styleguide-margin;
@@ -6,7 +6,7 @@
 	a
 	{
 		border-bottom: 1px dotted $styleguide-color03;
-		margin: 0 $rule / 4;
+		margin: 0 $styleguide-rule / 4;
 		color: $styleguide-color03;
 
 		&:hover
