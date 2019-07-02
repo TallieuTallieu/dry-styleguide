@@ -12,5 +12,9 @@
 </head>
 <body>
 	{% block body %}{% /block %}
+
+	{% block scripts %}
+		<script src="build/js/{{ \dry\asset_path( 'app.js' ) }}"></script>
+	{% /block %}
 </body>
 </html>

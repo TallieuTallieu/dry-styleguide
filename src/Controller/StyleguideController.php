@@ -14,11 +14,13 @@ class StyleguideController
 		$atoms = Support\get_list( Support\TYPE_ATOM );
 		$molecules = Support\get_list( Support\TYPE_MOLECULE );
 		$organisms = Support\get_list( Support\TYPE_ORGANISM );
+		$templates = Support\get_list( Support\TYPE_TEMPLATE );
 
 		$tpl = Application::get()->get(Template::class);
 		$tpl->atoms = $atoms;
 		$tpl->molecules = $molecules;
 		$tpl->organisms = $organisms;
+		$tpl->templates = $templates;
 		$tpl->render('index.tpl');
 	}
 
@@ -28,6 +30,7 @@ class StyleguideController
 			'a' => Support\TYPE_ATOM,
 			'm' => Support\TYPE_MOLECULE,
 			'o' => Support\TYPE_ORGANISM,
+			'tpl' => Support\TYPE_TEMPLATE,
 		];
 
 		$type_short = $request->parameters->string( 'type' );
@@ -48,6 +51,7 @@ class StyleguideController
 			'a' => Support\TYPE_ATOM,
 			'm' => Support\TYPE_MOLECULE,
 			'o' => Support\TYPE_ORGANISM,
+			'tpl' => Support\TYPE_TEMPLATE,
 		];
 
 		$type_short = $request->parameters->string( 'type' );
@@ -70,6 +74,7 @@ class StyleguideController
 			'a' => Support\TYPE_ATOM,
 			'm' => Support\TYPE_MOLECULE,
 			'o' => Support\TYPE_ORGANISM,
+			'tpl' => Support\TYPE_TEMPLATE,
 		];
 
 		$type_short = $request->parameters->string( 'type' );
@@ -85,5 +90,18 @@ class StyleguideController
 		$tpl->source = Support\render( $type, $component, $modifier );
 		$tpl->meta = Support\get_meta( $type, $component );
 		$tpl->render('view_component_modifier.tpl');
+	}
+
+	public static function viewTemplate( $request )
+	{
+		$component = $request->parameters->string( 'component' );
+
+		$tpl = Application::get()->get(Template::class);
+		$type = 'template';
+		$tpl->type_short = 'tpl';
+		$tpl->type_plural = 'templates';
+		$tpl->component_name = $component;
+		$tpl->modifiers = Support\get_rendered_component( $type, $component );
+		$tpl->render( 'view_template.tpl' );
 	}
 }

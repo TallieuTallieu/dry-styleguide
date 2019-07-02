@@ -7,6 +7,7 @@ use dry\Template;
 const TYPE_ATOM = 'atom';
 const TYPE_MOLECULE = 'molecule';
 const TYPE_ORGANISM = 'organism';
+const TYPE_TEMPLATE = 'template';
 
 function get_list( $type )
 {

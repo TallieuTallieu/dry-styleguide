@@ -34,6 +34,7 @@ class StyleguideServiceProvider extends ServiceProvider
 			'styleguide/(?<type>(a|m|o))/(?<component>.*)--(?<modifier>.*)/' => '\\Tnt\\Styleguide\\Controller\\StyleguideController::viewComponentModifier',
 			'styleguide/(?<type>(a|m|o))/(?<component>.*)/' => '\\Tnt\\Styleguide\\Controller\\StyleguideController::viewComponent',
 			'styleguide/(?<type>(a|m|o))/' => '\\Tnt\\Styleguide\\Controller\\StyleguideController::viewType',
+			'styleguide/tpl/(?<component>.*)/' => '\\Tnt\\Styleguide\\Controller\\StyleguideController::viewTemplate',
 		]);
 	}
 }
