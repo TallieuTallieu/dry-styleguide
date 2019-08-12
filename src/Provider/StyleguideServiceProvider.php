@@ -4,8 +4,10 @@ namespace Tnt\Styleguide\Provider;
 
 use dry\http\Response;
 use dry\route\Router;
+use Oak\Console\Facade\Console;
 use Oak\ServiceProvider;
 use Oak\Contracts\Container\ContainerInterface;
+use Tnt\Styleguide\Console\Styleguide;
 use Tnt\Styleguide\Template;
 
 /**
@@ -20,6 +22,7 @@ class StyleguideServiceProvider extends ServiceProvider
 	 */
 	public function register(ContainerInterface $app)
 	{
+		$app->set(Styleguide::class, Styleguide::class);
 		$app->set(Template::class, Template::class);
 	}
 
@@ -29,7 +32,9 @@ class StyleguideServiceProvider extends ServiceProvider
 	 */
 	public function boot(ContainerInterface $app)
 	{
-		Router::register( Response::$language, null, [
+		Console::registerCommand(Styleguide::class);
+
+		Router::register(Response::$language, null, [
 			'styleguide/' => '\\Tnt\\Styleguide\\Controller\\StyleguideController::index',
 			'styleguide/(?<type>(a|m|o))/(?<component>.*)--(?<modifier>.*)/' => '\\Tnt\\Styleguide\\Controller\\StyleguideController::viewComponentModifier',
 			'styleguide/(?<type>(a|m|o))/(?<component>.*)/' => '\\Tnt\\Styleguide\\Controller\\StyleguideController::viewComponent',
