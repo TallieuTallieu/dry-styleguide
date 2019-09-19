@@ -8,7 +8,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "reinvanoyen/oak": "^1.0.0"
+    },
     "autoload": {
       "files": [
         "src/Support/helpers.php"
@@ -16,10 +18,5 @@
       "psr-4": {
         "Tnt\\Styleguide\\": "src/"
       }
-    },
-    "scripts": {
-      "post-package-install": [
-        "mv ./vendor/reinvanoyen/dry-styleguide/Resources/sass/* ./style/sass/"
-      ]
     }
 }
