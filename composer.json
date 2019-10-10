@@ -1,13 +1,13 @@
 {
-    "name": "reinvanoyen/dry-styleguide",
-    "description": "Atomic styleguide system for DRY",
+  "name": "reinvanoyen/dry-styleguide",
+  "minimum-stability": "dev",
+  "description": "Atomic styleguide system for DRY",
     "authors": [
         {
             "name": "Rein Van Oyen",
             "email": "reinvanoyen@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "reinvanoyen/oak": "^1.0.0"
     },
