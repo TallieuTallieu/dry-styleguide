@@ -12,6 +12,7 @@ class Styleguide extends Command
         return $signature
             ->setName('styleguide')
             ->addSubCommand(Install::class)
-            ;
+            ->addSubCommand(AddCollection::class)
+        ;
     }
 }
