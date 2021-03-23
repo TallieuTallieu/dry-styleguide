@@ -1,5 +1,5 @@
 {
-  "name": "reinvanoyen/dry-styleguide",
+  "name": "tallieutallieu/dry-styleguide",
   "minimum-stability": "dev",
   "description": "Atomic styleguide system for DRY",
     "authors": [
@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "reinvanoyen/oak": "^1.0.0"
+        "tallieutallieu/oak": "^1.0.0"
     },
     "autoload": {
       "files": [
