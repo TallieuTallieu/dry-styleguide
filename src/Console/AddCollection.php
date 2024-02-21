@@ -50,9 +50,9 @@ class AddCollection extends Command
 
         if (! $this->stringExistsInFile('../../app/templates/styleguide/atoms/**/*', $stylePath)) {
             $output->writeLine('append styles to : '.$stylePath);
-            Filesystem::append($stylePath, PHP_EOL."@import '../../app/templates/styleguide/atoms/**/*';");
-            Filesystem::append($stylePath, PHP_EOL."@import '../../app/templates/styleguide/molecules/**/*';");
-            Filesystem::append($stylePath, PHP_EOL."@import '../../app/templates/styleguide/organisms/**/*';");
+            Filesystem::append($stylePath, PHP_EOL."@import '../../app/templates/styleguide/atoms/all';");
+            Filesystem::append($stylePath, PHP_EOL."@import '../../app/templates/styleguide/molecules/all';");
+            Filesystem::append($stylePath, PHP_EOL."@import '../../app/templates/styleguide/organisms/all';");
         }
 
         if (! $this->stringExistsInFile('../app/templates/styleguide/**/*.js', $jsPath)) {
