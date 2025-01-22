@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "tallieutallieu/oak": "^1.0 || ^ 1.1"
+        "tallieutallieu/oak": "^1.0 | ^ 1.1"
     },
     "autoload": {
       "files": [
