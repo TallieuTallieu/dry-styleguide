@@ -2,14 +2,8 @@
   "name": "tallieutallieu/dry-styleguide",
   "minimum-stability": "dev",
   "description": "Atomic styleguide system for DRY",
-    "authors": [
-        {
-            "name": "Rein Van Oyen",
-            "email": "reinvanoyen@gmail.com"
-        }
-    ],
     "require": {
-        "tallieutallieu/oak": "^1.0 || ^1.1 || dev-php8.2"
+        "tallieutallieu/oak": "^1.1.15"
     },
     "autoload": {
       "files": [
